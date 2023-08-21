@@ -71,7 +71,7 @@ void DllManualMap(Process& proc, const wstring& path)
 }
 int main() 
 {
-	SetConsoleTitleA("HoloEarthInjector by Quaxdrone");
+	SetConsoleTitleA("HoloEarthInjector by ClarkKeyton(Nijo Fukushi)");
 	const wstring curDir = current_path().wstring();
 	const wstring injectPath = curDir + L"\\Lemonicon.dll";
 	Process holoearthproc;

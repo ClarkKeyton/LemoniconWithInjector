@@ -273,7 +273,7 @@ void Render()
 	ImGuiWindowFlags flags = ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoSavedSettings;
 	ImGui::Begin("Lemonicon By Nijo Fukushi", 0, flags);
 	ImGui::SetWindowSize(ImVec2(550.F, 550.F));
-	ImGui::BulletText("It's my First Cheat For Game Holoearth");
+	ImGui::BulletText("It's my First DLC For Game Holoearth");
 	if (ImGui::Checkbox("Shutdown Public DLC", &suc)) 
 	{
 		kiero::shutdown();

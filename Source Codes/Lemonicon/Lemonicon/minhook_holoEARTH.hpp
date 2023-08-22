@@ -14,7 +14,7 @@ void(MinHOOK_FASTCALL CheckCheatTools_OnStateBegin_o)(DWORD*, DWORD*);
 
 void MinHOOK_STDCALL CheckCheatTools_OnStateBegin_h(DWORD* __this, DWORD* method) 
 {
-	cout << "If you see Japanese Message Box Error, please try cleaning regedit and delete all folders when you installing Cheat Engine or something else" << endl;
+	cout << "If you see Japanese Message Box Error, please try clearly reinstall Windows 10 or Windows 11 AGAIN!!! \nAnd Do NOT INSTALL Hacking Programs or Something Else!!!" << endl;
 	return CheckCheatTools_OnStateBegin_o(__this, method); //Returning of Original Code :D
 }
 

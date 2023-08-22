@@ -225,7 +225,6 @@ void InitImGui()
 	config_p.FontBuilderFlags |= ImGuiFreeTypeBuilderFlags_Oblique | ImGuiFreeTypeBuilderFlags_Bold;
 	ImGuiIO& io = ImGui::GetIO();
 	io.ConfigFlags = ImGuiConfigFlags_NoMouseCursorChange;
-	ImFontConfig config{};
 	io.Fonts->AddFontFromFileTTF("C:\\Windows\\Fonts\\Arial.ttf", 23.F, &config_p);
 	io.WantCaptureMouse = true;
 	ImGuiStyle& style = ImGui::GetStyle();
@@ -272,10 +271,10 @@ void Render()
 	ImGui_ImplWin32_NewFrame();
 	ImGui::NewFrame();
 	ImGuiWindowFlags flags = ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoSavedSettings;
-	ImGui::Begin("Lemonicon By Quaxdrone", 0, flags);
+	ImGui::Begin("Lemonicon By Nijo Fukushi", 0, flags);
 	ImGui::SetWindowSize(ImVec2(550.F, 550.F));
 	ImGui::BulletText("It's my First Cheat For Game Holoearth");
-	if (ImGui::Checkbox("Shutdown Cheat", &suc)) 
+	if (ImGui::Checkbox("Shutdown Public DLC", &suc)) 
 	{
 		kiero::shutdown();
 		pDevice->Release();
@@ -416,7 +415,7 @@ DWORD WINAPI MainThr(HMODULE hMod)
 		AllocConsole();
 		FILE* file_cons;
 		freopen_s(&file_cons, "CONOUT$", "w", stdout);
-		SetConsoleTitleA("Lemonicon by Quaxdrone");
+		SetConsoleTitleA("Lemonicon by ClarkKeyton(Nijo Fukushi)");
 		cout << "FAILED TO GET WINDOW OF HOLOEARTH!!!" << endl;
 		Sleep(500);
 		FreeLibraryAndExitThread(hMod, 334);

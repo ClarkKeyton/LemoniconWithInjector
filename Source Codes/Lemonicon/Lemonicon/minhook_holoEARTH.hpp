@@ -20,8 +20,8 @@ void MinHOOK_STDCALL CheckCheatTools_OnStateBegin_h(DWORD* __this, DWORD* method
 
 void MinHook_InitCheckCheatTools() 
 {
-	MH_CreateHook(MinHookMagic(0x840740), &CheckCheatTools_OnStateBegin_h, (LPVOID*)&CheckCheatTools_OnStateBegin_o);
-	MH_EnableHook(MinHookMagic(0x840740));
+	MH_CreateHook(MinHookMagic(0x7DCCC0), &CheckCheatTools_OnStateBegin_h, (LPVOID*)&CheckCheatTools_OnStateBegin_o);
+	MH_EnableHook(MinHookMagic(0x7DCCC0));
 }
 
 void(MinHOOK_FASTCALL NameVisible_orig)(DWORD*, bool, DWORD*);
@@ -32,7 +32,7 @@ void(MinHOOK_STDCALL NameVisible_hack)(DWORD* __this, bool isVisible, DWORD* met
 	return NameVisible_orig(__this, isVisible, method);
 }
 
-void MinHook_InitNameInvisibleRemotePlayer() 
+void MinHook_InitNameInvisibleRemotePlayer() //Is Kicked Now, Because It's Disabled!!! :D
 {
 	MH_CreateHook(MinHookMagic(0x7CEC70), &NameVisible_hack, (LPVOID*)&NameVisible_orig);
 	MH_EnableHook(MinHookMagic(0x7CEC70));
@@ -47,6 +47,6 @@ bool(MinHOOK_STDCALL TerminateSpecificDllDetected_hacked)(DWORD* method)
 }
 
 void MinHook_MagicTerminateSpecificDLLDetected() {
-	MH_CreateHook(MinHookMagic(0x7A9BB0), &TerminateSpecificDllDetected_hacked, (LPVOID*)&TerminateSpecificDllDetected_originalcode);
-	MH_EnableHook(MinHookMagic(0x7A9BB0));
+	MH_CreateHook(MinHookMagic(0x7B2040), &TerminateSpecificDllDetected_hacked, (LPVOID*)&TerminateSpecificDllDetected_originalcode);
+	MH_EnableHook(MinHookMagic(0x7B2040));
 }

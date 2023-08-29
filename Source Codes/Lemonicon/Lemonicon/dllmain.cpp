@@ -155,7 +155,7 @@ void CreateConsole()
 {
 	AllocConsole();
 	freopen_s(&fp, "CONOUT$", "w", stdout);
-	SetConsoleTitleA("Lemonicon by Ariflax");
+	SetConsoleTitleA("Lemonicon by Nijo Fukushi | AntiCoverCorp.CC");
 }
 void ReadToFileConsole(const char* fmt, ...) {
 	va_list args;
@@ -200,8 +200,8 @@ void InitDiscord()
 	{
 		DiscordRichPresence rich = DiscordRichPresence();
 		memset(&rich, 0, sizeof(rich));
-		rich.state = "Playing in HoloEarth with Cheat";
-		rich.details = "Playing in HoloEarth with Cheat";
+		rich.state = "Playing in HoloEarth with Public DLC";
+		rich.details = "Playing in HoloEarth with Public DLC";
 		rich.startTimestamp = TimeNow;
 		rich.endTimestamp = NULL; //NULL it's UNLIMITED END TIMESTAMP!!!!.
 		rich.largeImageKey = "holoearth_bigpictures";
@@ -225,7 +225,8 @@ void InitImGui()
 	config_p.FontBuilderFlags |= ImGuiFreeTypeBuilderFlags_Oblique | ImGuiFreeTypeBuilderFlags_Bold;
 	ImGuiIO& io = ImGui::GetIO();
 	io.ConfigFlags = ImGuiConfigFlags_NoMouseCursorChange;
-	io.Fonts->AddFontFromFileTTF("C:\\Windows\\Fonts\\Arial.ttf", 23.F, &config_p);
+	ImFontConfig config{};
+	io.Fonts->AddFontFromFileTTF("C:\\Windows\\Fonts\\Arial.ttf", 16.F, &config_p);
 	io.WantCaptureMouse = true;
 	ImGuiStyle& style = ImGui::GetStyle();
 	style.Colors[ImGuiCol_WindowBg] = ImColor(155, 0, 0, 255);
@@ -415,7 +416,7 @@ DWORD WINAPI MainThr(HMODULE hMod)
 		AllocConsole();
 		FILE* file_cons;
 		freopen_s(&file_cons, "CONOUT$", "w", stdout);
-		SetConsoleTitleA("Lemonicon by ClarkKeyton(Nijo Fukushi)");
+		SetConsoleTitleA("Lemonicon by Nijo Fukushi | AntiCoverCorp.CC");
 		cout << "FAILED TO GET WINDOW OF HOLOEARTH!!!" << endl;
 		Sleep(500);
 		FreeLibraryAndExitThread(hMod, 334);
